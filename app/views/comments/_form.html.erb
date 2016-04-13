@@ -1,0 +1,23 @@
+<div class="col-sm-12 comment-form">
+  <%= form_for Comment.new, url: post_comments_path(post), remote: true do |f|%>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <%= f.label :user%>
+          <%= f.text_field :user, class: 'focus form-control'%>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="form-group">
+          <%= f.label :body, 'Content'%>
+          <%= f.text_area :body, class: 'form-control', rows: 5%>
+        </div>
+      </div>
+    </div>
+
+    <%= f.submit 'Submit', data: { disable_with: 'Please wait...' }, class: 'btn btn-default btn-primary'%>
+  <%end%>
+</div><!-- /.comment-form -->
