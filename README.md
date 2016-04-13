@@ -7,6 +7,10 @@
 
 ```
 bundle install
+bundle exec rake db:create
+bundle exec rake db:migrate
+#导入测试数据
+bundle exec rake scraper:tuicool:import
 bundle exec rails s
 ```
 

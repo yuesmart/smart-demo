@@ -3,7 +3,7 @@ require 'open-uri'
 
 class TuicoolService
   class<<self
-    def invoke
+    def import
       1.upto(20) do |page|
         parse_list page
       end
