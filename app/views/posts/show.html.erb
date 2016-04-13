@@ -1,0 +1,14 @@
+<%= render 'shared/header'%>
+
+<div class="row">
+  <div class="col-sm-12 blog-main">
+    <div class="blog-post">
+      <h2 class="blog-post-title"><%= @post.title%></h2>
+      <p class="blog-post-meta"><%= @post.created_at%> by <a href="#">Martin</a></p>
+
+      <%= sanitize @post.body%>
+    </div><!-- /.blog-post -->
+  </div><!-- /.blog-main -->
+
+  <%= render 'comments/index', post: @post%>
+</div><!-- /.row -->

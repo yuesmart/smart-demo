@@ -1,0 +1,13 @@
+<%= render 'shared/header'%>
+
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    <%= render @posts%>
+    <div class="pagination pull-right">
+      <%= paginate @posts, theme: 'twitter-bootstrap-3'%>
+    </div>
+  </div><!-- /.blog-main -->
+
+  <%= render 'shared/sidebar'%>
+</div><!-- /.row -->
+

@@ -1,0 +1,3 @@
+$('#comments').prepend("<%= escape_javascript render(partial: 'comment', locals: {comment: @comment}) %>");
+$('#comment_<%=@comment.id%>').effect('highlight', {color: '#E6ff00'}, 5000);
+$('#new_comment')[0].reset();

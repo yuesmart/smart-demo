@@ -1,0 +1,21 @@
+<hr/>
+<a name="comment_<%= comment.id%>"/>
+<div class="col-sm-12 comment-entity" id="comment_<%= comment.id%>">
+  <div class="row">
+    <div class="col-sm-12 comment-title">
+      <div class="comment-avatar">
+        <%= image_tag 'default_avatar.png', height: '20px'%>
+      </div>
+      <%= comment.user%> Replied at <%= comment.created_at%>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 comment-body">
+
+      <%= comment.body%>
+    </div>
+  </div>
+</div>
+
+<div style="clear: both;"/>
