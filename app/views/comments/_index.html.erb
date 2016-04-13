@@ -2,7 +2,7 @@
 
 <h3>Comments</h3>
 <div class="comment-main">
-  <%= render 'form'%>
+  <%= render 'comments/form', post: post%>
   <div class="col-sm-12 comment-list" id="comments">
     <%= render post.comments%>
   </div><!-- /.comment-list -->
