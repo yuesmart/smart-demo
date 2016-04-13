@@ -2,5 +2,5 @@
 
 class Comment < ActiveRecord::Base
   belongs_to :commentable, polymorphic: true
-  scope :recent_comments, -> { limit(5) }
+  scope :recent_comments, -> { order(created_at: :desc).limit(5) }
 end
