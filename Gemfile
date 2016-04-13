@@ -18,7 +18,7 @@ gem 'bootstrap-kaminari-views'
 gem 'puma'
 
 #for scraper service
-gem 'hpricot'
+gem 'hpricot', require: false
 
 group :development, :test do
   gem 'byebug'
